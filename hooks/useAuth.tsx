@@ -9,7 +9,6 @@ import {
 import { useRouter } from "next/router";
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { auth } from "../firebase";
-import { error } from "console";
 
 interface IAuth {
   user: User | null;
@@ -41,20 +40,22 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const router = useRouter();
 
   // Persisting the user
-  useEffect(() =>
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // Logged in...
-        setUser(user);
-        setLoading(false);
-      } else {
-        // Not logged in...
-        setUser(null);
-        setLoading(false);
-        router.push("/login");
-      }
-      setInitialLoading(false);
-    }),
+  useEffect(
+    () =>
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // Logged in...
+          setUser(user);
+          setLoading(false);
+        } else {
+          // Not logged in...
+          setUser(null);
+          setLoading(true);
+          router.push("/login");
+        }
+
+        setInitialLoading(false);
+      }),
     [auth]
   );
 
@@ -111,8 +112,8 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
   return (
     <AuthContext.Provider value={memoedValue}>
-        
-        {!initialLoading && children}</AuthContext.Provider>
+      {!initialLoading && children}
+    </AuthContext.Provider>
   );
 };
 
