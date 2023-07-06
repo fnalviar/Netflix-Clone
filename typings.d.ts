@@ -23,7 +23,7 @@ export interface Movie {
 }
 
 export interface Element {
-    // the type can be either one of the lis
+    // the type can be either one of the list
   type:
     | "Bloopers"
     | "Featurette"
