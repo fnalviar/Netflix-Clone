@@ -1,9 +1,14 @@
 import useAuth from "@/hooks/useAuth";
 import { CheckIcon } from "@heroicons/react/outline";
+import { Product } from "@stripe/firestore-stripe-payments";
 import Head from "next/head";
 import Link from "next/link";
 
-function Plans() {
+interface Props { 
+  products: Product[]
+}
+
+function Plans({ products } : Props) {
   const { logout } = useAuth();
 
   return (
@@ -13,7 +18,7 @@ function Plans() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="border-b border-white/10 bg-[#141414] ">
+      <header className="border-b border-white/10 bg-[#141414]">
         <Link href="/">
           <img
             src="https://rb.gy/ulxxee"
@@ -32,7 +37,7 @@ function Plans() {
         </button>
       </header>
 
-      <main className="max-w-5xl px-5 pt-28 pb-12 transition-all md:px-10">
+      <main className="mx-auto max-w-5xl px-5 pt-36 pb-12 transition-all md:px-10">
         <h1 className="mb-3 text-3xl font-medium">
           Choose the plan that's right for you
         </h1>
@@ -61,7 +66,7 @@ function Plans() {
 
           {/* <Table /> */}
 
-          <button>Subcribe</button>
+          <button>Subscribe</button>
         </div>
       </main>
     </div>
