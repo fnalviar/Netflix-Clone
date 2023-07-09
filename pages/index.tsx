@@ -38,7 +38,7 @@ const Home = ({
 }: Props) => {
   const { loading } = useAuth();
   const showModal = useRecoilValue(modalState);
-  const subscription = false;
+  const subscription = true;
 
   if (loading || subscription === null) return null;
 
