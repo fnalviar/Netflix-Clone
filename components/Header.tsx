@@ -50,7 +50,7 @@ function Header() {
         <p className="hidden lg:inline">Kids</p>
         <BellIcon className="h-6 w-6" />
         {/* <Link href="/account"> */}
-        <Image
+        <img
           onClick={logout}
           src="https://rb.gy/g1pwyx"
           alt=""
