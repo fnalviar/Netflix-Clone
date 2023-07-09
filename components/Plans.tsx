@@ -7,6 +7,7 @@ import Table from "./Table";
 import { useState } from "react";
 import Loader from "./Loader";
 import { loadCheckout } from "@/lib/stripe";
+import Image from "next/legacy/image";
 
 interface Props {
   products: Product[];
@@ -33,7 +34,7 @@ function Plans({ products }: Props) {
 
       <header className="border-b border-white/10 bg-[#141414]">
         <Link href="/">
-          <img
+          <Image
             src="https://rb.gy/ulxxee"
             alt="Netflix"
             width={150}
