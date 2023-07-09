@@ -45,7 +45,7 @@ function Login() {
         objectFit="cover"
       />
 
-      <img
+      <Image
         src="https://rb.gy/ulxxee"
         alt="Netflix logo"
         className="absolute left-4 top-4 cursor-pointer object-contain md:left-10 md:top-6"
