@@ -39,7 +39,7 @@ function Account({ products }: Props) {
         </Link>
       </header>
 
-      <main className="pt-24 mx-auto max-w-6xl px-5 pb-12 transition-all md:px-10">
+      <main className="pt-28 mx-auto max-w-6xl px-5 pb-12 transition-all md:px-10">
         <div className="flex flex-col gap-x-4 md:flex-row md:items-center">
           <h1 className="text-3xl md:text-4xl">Account</h1>
           <div className="-ml-0.5 flex items-center gap-x-1.5">
