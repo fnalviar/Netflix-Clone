@@ -43,8 +43,8 @@ function Membership() {
             <p className="text-[gray]">Password: ********</p>
           </div>
           <div className="md:text-right">
-            <p className="membershipLink">Change email</p>
-            <p className="membershipLink">Change password</p>
+            <p className="membershipLink cursor-not-allowed">Change email</p>
+            <p className="membershipLink cursor-not-allowed">Change password</p>
           </div>
         </div>
 
@@ -60,10 +60,10 @@ function Membership() {
           </div>
 
           <div className="md:text-right">
-            <p className="membershipLink">Manage payment info</p>
-            <p className="membershipLink">Add backup payment method</p>
-            <p className="membershipLink">Billing Details</p>
-            <p className="membershipLink">Change billing day</p>
+            <p className="membershipLink cursor-not-allowed">Manage payment info</p>
+            <p className="membershipLink cursor-not-allowed">Add backup payment method</p>
+            <p className="membershipLink cursor-not-allowed">Billing Details</p>
+            <p className="membershipLink cursor-not-allowed">Change billing day</p>
           </div>
         </div>
       </div>
