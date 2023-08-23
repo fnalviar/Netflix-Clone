@@ -1,13 +1,12 @@
 import useAuth from "@/hooks/useAuth";
+import { loadCheckout } from "@/lib/stripe";
 import { CheckIcon } from "@heroicons/react/outline";
 import { Product } from "@stripe/firestore-stripe-payments";
 import Head from "next/head";
 import Link from "next/link";
-import Table from "./Table";
 import { useState } from "react";
 import Loader from "./Loader";
-import { loadCheckout } from "@/lib/stripe";
-import Image from "next/legacy/image";
+import Table from "./Table";
 
 interface Props {
   products: Product[];
