@@ -84,7 +84,7 @@ function Modal() {
     }
   }, [db, movie?.id]);
 
-  // Check if the movie is already in the user's list
+  // Check ifs the movie is already in the user's list
   useEffect(
     () =>
       setAddedToList(
